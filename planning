@@ -1,0 +1,15 @@
+
+tbl Reservering {
+    id (ai/pk)
+    naam 
+    afdeling 
+    datum_gebruik
+    datum_terug
+    gewenste Apparaat
+    bijzonderheden
+    getest_door
+    datum_test
+}
+
+
+

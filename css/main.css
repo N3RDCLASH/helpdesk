@@ -1,0 +1,17 @@
+body {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    /* background-repeat: no-repeat; */
+}
+
+#form {
+    background: #232f33 !important;
+    /* border: 1px solid #9e9e9e; */
+}
+
+#form>h1,h2,h3,h4,h5 {
+    color:white;
+}
+
+.row {
+    margin-bottom: 0 !important;
+}
