@@ -1,3 +1,30 @@
+Wat er gemaakt moet worden.
+
+Database:
+- Reservering tabel
+- PC Registratie tabel
+
+Front End:
+- Reserveringen form page
+- Reserveringen tabel data display page
+
+- PC Registratie form page
+- PC Registratie tabel data display page 
+
+Backend:
+- Basic CRUD (Create, Read, Update, Delete) functionality voor beide regisratie formulieren.
+
+Documentatie:
+- Logboek 
+- Handleiding 
+
+Languages and frameworks used:
+- PHP (backend,xampp)
+- mySQL (database,xampp)
+- Materialize (frontend css library)
+- JQuery (voor Materialize)
+
+Template database tables{    
 
 tbl Reservering {
     id (ai/pk)
@@ -11,5 +38,9 @@ tbl Reservering {
     datum_test
 }
 
+tbl PC_Registratie{
 
+}
+
+}
 
