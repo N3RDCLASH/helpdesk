@@ -5,7 +5,7 @@ CREATE TABLE reserveringen(
     datum_gebruik DATE,
     datum_terug DATE,
     gewenste_apparaat CHAR(20),
-    bijzonderheden VARCHAR(20),
+    bijzonderheden VARCHAR(50),
     getest_door CHAR(20),
-    datum_test CHAR(20)
+    datum_test DATE
 )
