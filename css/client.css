@@ -1,0 +1,48 @@
+html {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    height: 100vh;
+}
+
+#main_row {
+    margin: 0;
+}
+
+#nav {
+    background: #1ac495;
+}
+
+.nav-wrapper {
+    margin-left: 1%;
+}
+
+#search {
+    margin-top: 2%;
+    background: #1ac495;
+}
+
+#sidebar {
+    height: 100vh;
+}
+tbody {
+	display: block;
+	height: 78vh;
+	overflow: auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+thead {
+    width: calc( 100% - 1em )
+}
+table {
+    width:100%;
+}

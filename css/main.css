@@ -1,6 +1,7 @@
 body {
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     /* background-repeat: no-repeat; */
+    height: 100vh;
 }
 
 #form {
@@ -15,3 +16,13 @@ body {
 .row {
     margin-bottom: 0 !important;
 }
+
+/* label focus color
+.input-field input[type=text]:focus + label {
+    color: #1ac495;
+}
+/* label underline focus color 
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #1ac495;
+    box-shadow: 0 1px 0 0 #1ac495;
+  } */
