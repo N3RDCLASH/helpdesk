@@ -18,7 +18,7 @@
 <body class="">
 
     <div class="row">
-        <form action="php/register.php" method="POST" class="col s6 offset-s3 blue-grey darken-2" id="form">
+        <form action="php/reservering.php" method="POST" class="col s6 offset-s3 blue-grey darken-2" id="form">
             <h3>Reserveringen</h3>
             <div class="row">
                 <div class="input-field col s6">
