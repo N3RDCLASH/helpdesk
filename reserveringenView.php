@@ -1,5 +1,5 @@
 <?php
-include "php/getReserveringen.php";
+require "php/getReserveringen.php";
 
 ?>
 <html>
@@ -50,7 +50,7 @@ include "php/getReserveringen.php";
         </div>
       </nav>
 
-      <table class="responsive-table highlight white-text">
+      <table class="highlight white-text">
         <thead>
           <tr>
             <th>Naam</th>
@@ -58,18 +58,21 @@ include "php/getReserveringen.php";
             <th>Datum van Afgifte</th>
             <th>Datum Terug </th>
             <th>Gewenste Apparaat</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>
            <?php 
            while(mysqli_stmt_fetch($stmt)){
             echo
-            "<tr>
+            "<tr id='$id'>
             <td>".$naam."</td>
             <td>".$afdeling."</td>
             <td>".$datum_uitgave."</td>
             <td>".$datum_terug."</td>
             <td>".$gewenste_apparaat."</td>
+            <td><i class='material-icons'><a  id='edit' class='white-text' onclick='showModal(".$id.")'>create</a></td>
+            
             </tr>";
         }
     
@@ -80,12 +83,31 @@ include "php/getReserveringen.php";
         </tbody>
       </table>
     </div>
-    <div class="col s3 pull-s9 blue-grey darken-4" id="sidebar"></div>
+    <div class="col s3 pull-s9 blue-grey darken-4" id="sidebar">
+
+    </div>
   </div>
+
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <input type="text" name="" id="recordId">
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="">Agree</a>
+    </div>
+  </div>
+          
 </body>
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script src="js/editRecord.js"></script>
+<script src="js/modal.js"></script>
 
 </html>

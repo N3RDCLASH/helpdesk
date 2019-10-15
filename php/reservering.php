@@ -3,14 +3,7 @@
 
 if (isset($_POST["action"])) {
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "helpdesk";
-    $port = "3306";
-
-    //database connection
-    $link = mysqli_connect($servername, $username, $password, $dbname, $port);
+    require "conn.php";
 
     //escaping strings in query
     $naam = mysqli_real_escape_string($link, $_POST["naam"]);

@@ -17,6 +17,10 @@ body {
     margin-bottom: 0 !important;
 }
 
+#edit{
+cursor: pointer;
+}
+
 /* label focus color
 .input-field input[type=text]:focus + label {
     color: #1ac495;
