@@ -30,7 +30,7 @@ body {
 #sidebar {
     height: 100vh;
 }
-tbody {
+#recordtbody {
 	display: block;
 	height: 78vh;
 	overflow: auto;
