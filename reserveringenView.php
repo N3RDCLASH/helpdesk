@@ -135,15 +135,11 @@ require "php/getRecords.php";
           <label for="datum_test">Datum Test</label></div>
       </div>
     </div>
-    <?php
-    echo '
     <div class="modal-footer blue-grey darken-3">
-      <button class="btn waves-effect waves-light modal-close" type="button" value="submit"  onclick="updateRecord('.$id.')" name="action">Submit
-        <i class="material-icons right">send</i>
+      <button class="btn waves-effect waves-light modal-close" id="submit" type="button" value="submit"  onclick="" name="action">Update<i class="material-icons right">send</i>
       </button>
       <a href="#!" onclick="" class="modal-close white-text waves-effect waves- btn-flat" onclick="">Cancel</a>
-    </div>';
-    ?>
+    </div>
   </div>
 </form>
 

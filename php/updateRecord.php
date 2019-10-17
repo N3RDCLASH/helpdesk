@@ -46,8 +46,9 @@ if (!mysqli_stmt_prepare($stmt, $query)) {
     mysqli_stmt_execute($stmt);
 
     mysqli_stmt_close($stmt);
+    mysqli_close($link);
 }
-$msg = "record updated succesfully";
+$msg = "Record updated succesfully!";
 $return_Object = [
     "msg" => $msg,
     "id" => $_id

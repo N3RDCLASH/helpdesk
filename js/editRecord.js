@@ -1,11 +1,6 @@
-// function edit(el) {
-//     recordId = el.parentElement.parentElement.parentElement.id;
-
-
-//show data in Modal 
-
 
 function showDataInModal(response) {
+  
     let recordNaamInput = document.getElementById("naam") //input
     let recordAfdelingInput = document.getElementById("afdeling") //input
     let recordDatum_UitgaveInput = document.getElementById("datum_uitgave") //input
@@ -15,7 +10,7 @@ function showDataInModal(response) {
     let recordGetest_DoorInput = document.getElementById("getest_door") //input
     let recordDatum_TestInput = document.getElementById("datum_test") //input
     
-    
+    var $id = response.id;
     recordNaamInput.value = response.naam
     recordAfdelingInput.value = response.afdeling
     recordDatum_UitgaveInput.value = response.datum_uitgave
@@ -25,6 +20,9 @@ function showDataInModal(response) {
     recordGetest_DoorInput.value = response.getest_door
     recordDatum_TestInput.value = response.datum_test
 
+    console.log($id);
+
+    updateRecord($id);
      
      
 }
@@ -53,19 +51,26 @@ function getData(id){
 }
 
 function updateRecord(id){
-    form = document.getElementById('form');   
-    const formData = new FormData(form);
-
-    var url = `./php/updateRecord.php?id=${id}`;
-    console.log(url)
-    fetch(url,{
-        method:"post",
-        body: formData
-    })
-    .then(function (response) {
-      console.log( response.json)
-
-    }).catch(function(error){
-        console.error(error)
-    })
+    $btn = document.getElementById("submit");
+    $btn.addEventListener(
+        "click", function(){
+            form = document.getElementById('form');   
+            const formData = new FormData(form);
+        
+            var url = `./php/updateRecord.php?id=${id}`;
+            console.log(url)
+            fetch(url,{
+                method:"post",
+                body: formData
+            })
+            .then(function (response) {
+              return response.json()
+            }).then(function(payload) {
+                var toastHTML = `<span>${payload.msg}</span><button class="btn-flat toast-action">Undo</button>`;
+                M.toast({html: toastHTML});
+            }).catch(function(error){
+                console.error(error)
+            })
+        }
+    )
 }
