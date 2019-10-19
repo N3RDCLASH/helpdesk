@@ -35,6 +35,11 @@ function showModal(recordId) {
     getData(recordId)
 
     instance.open();
+}
+function showSubmitModal(){
+    let elem = document.getElementById('modal2');
+    let instance = M.Modal.getInstance(elem);
+    instance.open()
 
 }
 
@@ -68,6 +73,32 @@ function updateRecord(id){
             }).then(function(payload) {
                 var toastHTML = `<span>${payload.msg}</span><button class="btn-flat toast-action">Undo</button>`;
                 M.toast({html: toastHTML});
+                location.reload(); 
+            }).catch(function(error){
+                console.error(error)
+            })
+        }
+    )
+}
+function deleteRecord (){
+    $btn = document.getElementById("")
+    $btn.addEventListener(
+        "click", function(){
+            form = document.getElementById('form');   
+            const formData = new FormData(form);
+        
+            var url = `./php/deleteRecord.php?id=${id}`;
+            console.log(url)
+            fetch(url,{
+                method:"post",
+                body: formData
+            })
+            .then(function (response) {
+              return response.json()
+            }).then(function(payload) {
+                var toastHTML = `<span>${payload.msg}</span><button class="btn-flat toast-action">Undo</button>`;
+                M.toast({html: toastHTML});
+                location.reload();
             }).catch(function(error){
                 console.error(error)
             })

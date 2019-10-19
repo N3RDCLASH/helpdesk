@@ -9,17 +9,14 @@ body {
     /* border: 1px solid #9e9e9e; */
 }
 
-#form>h1,h2,h3,h4,h5 {
-    color:white;
+#form>h1, h2, h3, h4, h5 {
+    color: white;
 }
 
 .row {
     margin-bottom: 0 !important;
 }
 
-#edit{
-cursor: pointer;
-}
 
 /* label focus color
 .input-field input[type=text]:focus + label {

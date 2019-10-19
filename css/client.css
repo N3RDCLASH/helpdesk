@@ -1,5 +1,6 @@
 html {
     margin: 0;
+    overflow-y: hidden !important;
 }
 
 body {
@@ -32,7 +33,7 @@ body {
 }
 #recordtbody {
 	display: block;
-	height: 78vh;
+	height: 82vh;
 	overflow: auto;
 }
 thead, tbody tr {
@@ -45,4 +46,14 @@ thead {
 }
 table {
     width:100%;
+
 }
+.modal {
+   /* overflow: hidden; */
+}
+#edit {
+    cursor: pointer;
+}
+/* tbody{
+    overflow: hidden;
+} */
